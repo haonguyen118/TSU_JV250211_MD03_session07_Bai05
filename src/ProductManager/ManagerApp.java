@@ -37,8 +37,9 @@ public class ManagerApp {
                     System.out.println("Nhap ten moi (hoac de trong de giu nguyen): ");
                     String updateName = sc.nextLine();
                     System.out.println("Nhap gia moi (hoac de trong de giu nguyen): ");
-                    double updatePrice = sc.nextDouble();
-                    manager.updateProduct(updateID, updateName, updatePrice);
+                    String newPriceInput = sc.nextLine();
+                    Double newPrice = newPriceInput.isEmpty() ? null : Double.parseDouble(newPriceInput);
+                    manager.updateProduct(updateID, updateName.isEmpty() ? null : updateName, newPrice);
                     break;
                 case 4:
                     System.out.println("Nhap ID san pham can xoa: ");
