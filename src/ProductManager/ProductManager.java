@@ -51,7 +51,7 @@ class Products {
     }
     void deleteProduct(String id) {
         for (Products product : products) {
-            if(products.equals(id)){
+            if(product.id.equals(id)){
                 products.remove(product);
                 System.out.println("San pham da duoc xoa thanh cong");
                 return;
